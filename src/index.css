@@ -1,12 +1,14 @@
 :root {
-  --primary: #4e342e;
+  --primary: #8b4513;
   --accent: #a1887f;
   --secondary: #8bc34a;
   --danger: #d9472b;
   --text-dark: #2c2c2c;
+  --primary-font: "Inter", sans-serif;
 }
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Inter", sans-serif;
 }
