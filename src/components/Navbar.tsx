@@ -1,4 +1,6 @@
-import { Box, AppBar, Typography } from "@mui/material";
+import { Box, AppBar, Typography, MenuItem, Menu } from "@mui/material";
+import { Link } from "react-router";
+// import {Link} from "react-router"
 
 function NavBar() {
   return (
@@ -6,33 +8,42 @@ function NavBar() {
       component="div"
       sx={{ width: "100%", display: "flex", justifyContent: "space-between" }}
     >
-      <AppBar sx={{ backgroundColor: "teal", padding: 2 }}>
+      <AppBar sx={{ backgroundColor: "var(--primary)", padding: 2 }}>
         <Box
           component="div"
           display="flex"
           sx={{ alignItems: "center", gap: "2rem" }}
         >
-          <Typography variant="h3" fontSize="1.5rem" fontWeight="800">
-            ChickHub
+          <Typography variant="h3" fontSize="1.2rem" fontWeight="600">
+            <MenuItem>ChickHub</MenuItem>
           </Typography>
           <Box
             component="div"
             display="flex"
-            gap="3rem"
-            paddingLeft={{ md: "50%", xs: "10%" }}
+            gap="2rem"
+            paddingLeft={{ md: "40%", xs: "10%" }}
+            sx={{ textTransform: "uppercase", fontWeight: "700" }}
           >
-            <Typography variant="h6" fontSize="1rem" fontWeight="600">
+            <MenuItem component={Link} to="/" sx={{ fontSize: "0.9rem" }}>
               Home
-            </Typography>
-            <Typography variant="h6" fontSize="1rem" fontWeight="600">
-              Product
-            </Typography>
-            <Typography variant="h6" fontSize="1rem" fontWeight="600">
+            </MenuItem>
+            <MenuItem
+              component={Link}
+              to="/products"
+              sx={{ fontSize: "0.9rem" }}
+            >
+              Products
+            </MenuItem>
+            <MenuItem component={Link} to="/about" sx={{ fontSize: "0.9rem" }}>
               About
-            </Typography>
-            <Typography variant="h6" fontSize="1rem" fontWeight="600">
+            </MenuItem>
+            <MenuItem
+              component={Link}
+              to="/contact"
+              sx={{ fontSize: "0.9rem" }}
+            >
               Contact
-            </Typography>
+            </MenuItem>
           </Box>
         </Box>
       </AppBar>
