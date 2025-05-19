@@ -14,6 +14,7 @@ function HeroSection() {
         minHeight: "80vh",
         gap: "2rem",
         padding: "2rem",
+        backgroundColor: "#fff",
         fontFamily: "var(--primaryFont",
       }}
     >

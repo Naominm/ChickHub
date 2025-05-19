@@ -2,10 +2,11 @@
   --primary: #8b4513;
   --hover: #5e2f0d;
   --accent: #a1887f;
-  --bgAccent: "#F1F6F1";
+  --bgAccent: #f1f6f1;
   --secondary: #4caf50;
   --danger: #d9472b;
   --text-dark: #2c2c2c;
+  --text-light: #6c6660;
   --primary-font: "Inter", sans-serif;
 }
 * {
