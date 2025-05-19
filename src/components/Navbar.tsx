@@ -1,4 +1,4 @@
-import { Box, AppBar, Typography, MenuItem, Menu, Button } from "@mui/material";
+import { Box, AppBar, Typography, MenuItem, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
 function NavBar() {
@@ -43,7 +43,7 @@ function NavBar() {
               to="/products"
               sx={{ fontSize: "0.8rem" }}
             >
-              Products
+              Features
             </MenuItem>
             <MenuItem component={Link} to="/about" sx={{ fontSize: "0.8rem" }}>
               About
