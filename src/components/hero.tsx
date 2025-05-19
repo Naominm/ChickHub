@@ -73,9 +73,9 @@ function ImageSection() {
         sx={{
           width: { xs: "100%", md: "100%" },
           border: "none",
-          height: { xs: "auto", md: "300px" },
+          height: { xs: "auto", md: "350px" },
           objectFit: "cover",
-          objectPosition: "center-right",
+          objectPosition: "center-bottom",
         }}
       ></Box>
     </Box>

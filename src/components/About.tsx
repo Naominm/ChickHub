@@ -1,10 +1,18 @@
 import { Box, Typography, Button } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import Hens from "../assets/kuku.jpeg";
 function AboutSection() {
   return (
     <Box
       component="div"
-      sx={{ display: "flex", gap: "3rem", alignItems: "center", mt: 5, mb: 5 }}
+      sx={{
+        display: "flex",
+        gap: "3rem",
+        alignItems: "center",
+        mt: 5,
+        mb: 5,
+        px: "1rem",
+      }}
     >
       <ImageSection />
       <TextSection />
@@ -13,7 +21,13 @@ function AboutSection() {
 }
 
 function ImageSection() {
-  return <Box component="div" sx={{ width: "50%" }}></Box>;
+  return (
+    <Box
+      component="img"
+      src={Hens}
+      sx={{ width: "50%", objectFit: "cover", borderRadius: "1rem" }}
+    ></Box>
+  );
 }
 
 function TextSection() {
