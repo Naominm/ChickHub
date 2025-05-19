@@ -7,7 +7,7 @@ function NavBar() {
       component="div"
       sx={{ width: "100%", display: "flex", justifyContent: "space-between" }}
     >
-      <AppBar sx={{ backgroundColor: "#fff", padding: 2 }} elevation={0.5}>
+      <AppBar sx={{ backgroundColor: "#fff", padding: 2 }} elevation={0}>
         <Box
           component="div"
           display="flex"

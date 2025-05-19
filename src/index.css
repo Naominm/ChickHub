@@ -1,7 +1,8 @@
 :root {
   --primary: #8b4513;
+  --hover: #5e2f0d;
   --accent: #a1887f;
-  --secondary: #8bc34a;
+  --secondary: #4caf50;
   --danger: #d9472b;
   --text-dark: #2c2c2c;
   --primary-font: "Inter", sans-serif;
