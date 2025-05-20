@@ -1,9 +1,15 @@
-import { Box, Typography } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Input,
+  Button,
+  TextField,
+  Paper,
+} from "@mui/material";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { GitHub } from "@mui/icons-material";
 function ContactSection() {
   return (
     <Box
@@ -135,7 +141,7 @@ function ContactInformation() {
             "&:hover": { backgroundColor: "var(--primary)", color: "#fff" },
           }}
         >
-          <GitHub
+          <GitHubIcon
             sx={{ color: "var(--primary)", "&:hover": { color: "#fff" } }}
           />
         </Typography>
@@ -145,7 +151,38 @@ function ContactInformation() {
 }
 
 function FormInformation() {
-  return <Box component="div" sx={{ width: "50%" }}></Box>;
+  return (
+    <Paper
+      component="form"
+      sx={{
+        pt: "3rem",
+        width: "50%",
+        display: "flex",
+        flexDirection: "column",
+        gap: "2rem",
+        px: "1.5rem",
+      }}
+    >
+      <TextField label="Name" variant="outlined">
+        Name
+      </TextField>
+      <TextField label="Email" variant="outlined">
+        Email
+      </TextField>
+      <TextField label="Message" variant="outlined" multiline>
+        Message
+      </TextField>
+      <Button
+        variant="contained"
+        sx={{
+          backgroundColor: "var(--primary)",
+          "&:hover": { backgroundColor: "var(--hover)" },
+        }}
+      >
+        Send a Message
+      </Button>
+    </Paper>
+  );
 }
 
 export default ContactSection;
