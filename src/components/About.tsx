@@ -9,7 +9,7 @@ function AboutSection() {
         display: "flex",
         gap: "3rem",
         alignItems: "center",
-        mt: 5,
+        mt: 8,
         mb: 5,
         px: "1rem",
       }}
@@ -70,7 +70,7 @@ function TextSection() {
       </Typography>
       <Typography
         variant="body2"
-        sx={{ display: "flex", alignItems: "center", gap: "1rem" }}
+        sx={{ display: "flex", alignItems: "center", gap: "1.5rem" }}
       >
         <CheckCircleIcon sx={{ color: "var(--secondary)" }} />
         Community Support <br />
@@ -78,7 +78,12 @@ function TextSection() {
       </Typography>
       <Button
         variant="contained"
-        sx={{ backgroundColor: "var(--primary)", width: "20rem" }}
+        sx={{
+          backgroundColor: "var(--primary)",
+          width: "15rem",
+          mt: 3,
+          "&:hover": { backgroundColor: "var(--hover)" },
+        }}
       >
         See How It Works
       </Button>

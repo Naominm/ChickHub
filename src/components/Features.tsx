@@ -10,15 +10,24 @@ interface CardSectionProps {
   Text: string;
   Icon: ReactNode;
 }
+interface titleSectionProps {
+  heading: String;
+  subHeading: String;
+  subHeading2: String;
+}
 function FeaturesSection() {
   return (
     <Box component="div" sx={{ backgroundColor: "var(--bgAccent)" }}>
-      <TextSection />
+      <TextSection
+        heading="What ChickHub Offers"
+        subHeading="Comprehensive tools designed specifically for poultry farmers to improve"
+        subHeading2="productivity and profitability."
+      />
     </Box>
   );
 }
 
-function TextSection() {
+function TextSection({ heading, subHeading, subHeading2 }: titleSectionProps) {
   return (
     <Box
       component="div"
@@ -36,15 +45,14 @@ function TextSection() {
         variant="h4"
         sx={{ color: "var(--primary)", fontWeight: "800" }}
       >
-        What ChickHub Offers
+        {heading}
       </Typography>
       <Typography
         variant="h6"
         fontSize="1rem"
         sx={{ color: "var(--text-light)" }}
       >
-        Comprehensive tools designed specifically for poultry farmers to improve{" "}
-        <br /> productivity and profitability.
+        {subHeading} <br /> {subHeading2}
       </Typography>
       <Box component="div" display="flex" gap="2rem" mt="5rem">
         <CardSection

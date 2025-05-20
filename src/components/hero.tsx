@@ -51,12 +51,22 @@ function TextSection() {
         markets.
       </Typography>
       <Box sx={{ display: "flex", gap: "2rem" }}>
-        <Button variant="contained" sx={{ backgroundColor: "var(--primary)" }}>
+        <Button
+          variant="contained"
+          sx={{
+            backgroundColor: "var(--primary)",
+            "&:hover": { backgroundColor: "var(--hover)" },
+          }}
+        >
           Get started
         </Button>
         <Button
           variant="outlined"
-          sx={{ color: "var(--primary)", border: "2px solid var(--primary)" }}
+          sx={{
+            color: "var(--primary)",
+            border: "2px solid var(--primary)",
+            "&:hover": { backgroundColor: "var(--primary)", color: "#fff" },
+          }}
         >
           Explore more
         </Button>

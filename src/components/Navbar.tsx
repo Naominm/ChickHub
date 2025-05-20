@@ -57,7 +57,10 @@ function NavBar() {
             </MenuItem>
             <Button
               variant="contained"
-              sx={{ backgroundColor: "var(--primary)" }}
+              sx={{
+                backgroundColor: "var(--primary)",
+                "&:hover": { backgroundColor: "var(--hover)" },
+              }}
             >
               Get Started
             </Button>
