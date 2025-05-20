@@ -1,9 +1,4 @@
-import { Box, Typography, Card } from "@mui/material";
-import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
-import BarChartIcon from "@mui/icons-material/BarChart";
-import EventIcon from "@mui/icons-material/Event";
-import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
-import CardSection from "./cardSection";
+import { Box, Typography } from "@mui/material";
 
 interface titleSectionProps {
   heading: String;
@@ -23,12 +18,11 @@ function CardTextSection({
         display: "flex",
         flexDirection: "column",
         gap: "1rem",
-        minHeight: "30rem",
         textAlign: "center",
-        padding: "5rem",
+        padding: "1rem",
+        pt: 10,
       }}
     >
-      <Box component="img"></Box>
       <Typography
         variant="h4"
         sx={{ color: "var(--primary)", fontWeight: "800" }}
@@ -42,28 +36,6 @@ function CardTextSection({
       >
         {subHeading} <br /> {subHeading2}
       </Typography>
-      <Box component="div" display="flex" gap="2rem" mt="5rem">
-        <CardSection
-          title="Flock Management"
-          Text="Keep track of your birds with our easy-to-use management system. Record health status, feeding schedules, and more"
-          Icon={<BusinessCenterIcon />}
-        />
-        <CardSection
-          title="Productivity Tracking"
-          Text="Monitor egg production, growth rates, and other key metrics to optimize your farm's performance."
-          Icon={<BarChartIcon />}
-        />
-        <CardSection
-          title="Market Linkage"
-          Text="Connect with buyers, suppliers, and other farmers. Access real-time market prices and demands."
-          Icon={<EventIcon />}
-        />
-        <CardSection
-          title="Financial Insights"
-          Text="Track expenses, revenue, and profit margins. Generate reports to make data-driven decisions for your farm."
-          Icon={<AttachMoneyIcon />}
-        />
-      </Box>
     </Box>
   );
 }
