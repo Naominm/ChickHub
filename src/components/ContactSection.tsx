@@ -1,5 +1,8 @@
 import { Box, Typography } from "@mui/material";
-
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import PhoneIcon from "@mui/icons-material/Phone";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 function ContactSection() {
   return (
     <Box
@@ -35,10 +38,73 @@ function ContactInformation() {
       >
         Let's Work Together!
       </Typography>
-      <Typography variant="h6" sx={{ fontSize: "1rem" }}>
+      <Typography
+        variant="h6"
+        sx={{ fontSize: "1rem", color: "var(--text-light)" }}
+      >
         Have questions about ChickHub or interested in Naomi's web development
         services? Get in touch and I'll get back to you as soon as possible.
       </Typography>
+      <Box
+        component="div"
+        sx={{ display: "flex", alignItems: "center", gap: "1.5rem" }}
+      >
+        <Typography>
+          <MailOutlineIcon
+            sx={{
+              backgroundColor: "var(--bgIcon)",
+              borderRadius: "50%",
+              height: "2rem",
+              width: "2rem",
+              padding: "0.2rem",
+              color: "var(--primary)",
+            }}
+          />
+        </Typography>
+        <Typography variant="body2" sx={{ color: "var(--text-light)" }}>
+          Email <br />{" "}
+          <span
+            style={{
+              fontSize: "1rem",
+              fontWeight: "500",
+              color: "var(--text-dark)",
+            }}
+          >
+            naomi@chickhub.com
+          </span>
+        </Typography>
+      </Box>
+      <Box
+        component="div"
+        sx={{ display: "flex", alignItems: "center", gap: "1.5rem" }}
+      >
+        <Typography>
+          <PhoneIcon
+            sx={{
+              backgroundColor: "var(--bgIcon)",
+              borderRadius: "50%",
+              height: "2rem",
+              width: "2rem",
+              padding: "0.2rem",
+              color: "var(--primary)",
+            }}
+          />
+        </Typography>
+        <Typography variant="body2" sx={{ color: "var(--text-light)" }}>
+          Whatsapp
+          <br />{" "}
+          <span
+            style={{
+              fontSize: "1rem",
+              fontWeight: "500",
+              color: "var(--text-dark)",
+            }}
+          >
+            +254703937319
+          </span>
+        </Typography>
+      </Box>
+      <Box></Box>
     </Box>
   );
 }
