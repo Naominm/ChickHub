@@ -3,6 +3,7 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { GitHub } from "@mui/icons-material";
 function ContactSection() {
   return (
     <Box
@@ -29,7 +30,7 @@ function ContactInformation() {
         width: "50%",
         display: "flex",
         flexDirection: "column",
-        gap: "1rem",
+        gap: "1.5rem",
       }}
     >
       <Typography
@@ -104,7 +105,35 @@ function ContactInformation() {
           </span>
         </Typography>
       </Box>
-      <Box></Box>
+      <Box
+        component="div"
+        sx={{ display: "flex", paddingLeft: "2rem", gap: "2rem" }}
+      >
+        <Typography
+          variant="body2"
+          sx={{
+            backgroundColor: "var(--bgIcon)",
+            width: "2rem",
+            height: "2rem",
+            padding: "0.2rem",
+            borderRadius: "50%",
+          }}
+        >
+          <LinkedInIcon sx={{ color: "var(--primary)" }} />
+        </Typography>
+        <Typography
+          variant="body2"
+          sx={{
+            backgroundColor: "var(--bgIcon)",
+            width: "2rem",
+            height: "2rem",
+            padding: "0.2rem",
+            borderRadius: "50%",
+          }}
+        >
+          <GitHub sx={{ color: "var(--primary)" }} />
+        </Typography>
+      </Box>
     </Box>
   );
 }
