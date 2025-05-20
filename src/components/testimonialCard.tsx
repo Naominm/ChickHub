@@ -1,8 +1,11 @@
-import { Box, Card } from "@mui/material";
+import { Box, Card, Typography } from "@mui/material";
 import { ReactNode } from "react";
 
 interface CardContainerProps {
   icon: ReactNode;
+  text: String;
+  name: String;
+  position: String;
 }
 
 // function TestimonialCard() {
@@ -13,7 +16,7 @@ interface CardContainerProps {
 //      );
 // }
 
-function TestimonialCard({ icon }: CardContainerProps) {
+function TestimonialCard({ icon, text, name, position }: CardContainerProps) {
   return (
     <Card
       sx={{
@@ -21,25 +24,43 @@ function TestimonialCard({ icon }: CardContainerProps) {
         width: "30%",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
+        gap: "1rem",
+        alignItems: "left",
         border: "0.5rem",
-        textAlign: "center",
+        padding: "1rem",
+        mt: 5,
+        borderRadius: "0.5rem",
       }}
     >
       <Box
         component="div"
         sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "var(--bgIcon)",
-          height: "4rem",
-          width: "4rem",
-          borderRadius: "50%",
           color: "var(--secondary)",
+          display: "flex",
+          flexDirection: "column",
+          gap: "0.7rem",
+          padding: "1rem",
         }}
       >
         {icon}
+        <Typography
+          variant="body2"
+          sx={{ fontSize: "1rem", color: "var(--text-dark)" }}
+        >
+          {text}
+        </Typography>
+        <Typography
+          variant="body2"
+          sx={{ fontSize: "1rem", color: "var(--primary)", fontWeight: "700" }}
+        >
+          {name}
+        </Typography>
+        <Typography
+          variant="body2"
+          sx={{ fontSize: "1rem", color: "var(--text-light)" }}
+        >
+          {position}
+        </Typography>
       </Box>
     </Card>
   );
