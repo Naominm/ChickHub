@@ -4,6 +4,7 @@ import HeroSection from "../components/hero";
 import FeaturesSection from "../components/Features";
 import AboutSection from "../components/About";
 import TestimonialSection from "../components/Testimonial";
+import ContactSection from "../components/ContactSection";
 function LandingPage() {
   return (
     <Box component="div">
@@ -12,6 +13,7 @@ function LandingPage() {
       <FeaturesSection />
       <AboutSection />
       <TestimonialSection />
+      <ContactSection />
     </Box>
   );
 }
