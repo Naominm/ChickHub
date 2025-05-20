@@ -117,9 +117,12 @@ function ContactInformation() {
             height: "2rem",
             padding: "0.2rem",
             borderRadius: "50%",
+            "&:hover": { backgroundColor: "var(--primary)", color: "#fff" },
           }}
         >
-          <LinkedInIcon sx={{ color: "var(--primary)" }} />
+          <LinkedInIcon
+            sx={{ color: "var(--primary)", "&:hover": { color: "#fff" } }}
+          />
         </Typography>
         <Typography
           variant="body2"
@@ -129,9 +132,12 @@ function ContactInformation() {
             height: "2rem",
             padding: "0.2rem",
             borderRadius: "50%",
+            "&:hover": { backgroundColor: "var(--primary)", color: "#fff" },
           }}
         >
-          <GitHub sx={{ color: "var(--primary)" }} />
+          <GitHub
+            sx={{ color: "var(--primary)", "&:hover": { color: "#fff" } }}
+          />
         </Typography>
       </Box>
     </Box>
