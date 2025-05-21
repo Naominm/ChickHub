@@ -1,11 +1,4 @@
-import {
-  Box,
-  Typography,
-  Input,
-  Button,
-  TextField,
-  Paper,
-} from "@mui/material";
+import { Box, Typography, Button, TextField, Paper } from "@mui/material";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -18,6 +11,7 @@ function ContactSection() {
         minHeight: "30rem",
         paddingTop: 10,
         display: "flex",
+        flexDirection: { xs: "column", md: "row" },
         gap: "2rem",
         px: 5,
         mb: 10,
@@ -34,7 +28,7 @@ function ContactInformation() {
     <Box
       component="div"
       sx={{
-        width: "50%",
+        width: { xs: "100%", md: "50%" },
         display: "flex",
         flexDirection: "column",
         gap: "1.5rem",
@@ -157,7 +151,7 @@ function FormInformation() {
       component="form"
       sx={{
         pt: "3rem",
-        width: "50%",
+        width: { xs: "100%", md: "50%" },
         display: "flex",
         flexDirection: "column",
         gap: "2rem",
@@ -177,6 +171,7 @@ function FormInformation() {
         variant="contained"
         sx={{
           backgroundColor: "var(--primary)",
+          mb: { xs: 2, mb: 0 },
           "&:hover": { backgroundColor: "var(--hover)" },
         }}
       >
