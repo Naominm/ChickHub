@@ -7,6 +7,7 @@ function HeroSection() {
       component="div"
       sx={{
         display: "flex",
+        flexDirection: { xs: "column", md: "row" },
         alignItems: "center",
         justifyContent: "space-between",
         width: "100%",
@@ -28,29 +29,33 @@ function TextSection() {
   return (
     <Box
       component="div"
-      width="50%"
       sx={{
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         gap: "2rem",
+        width: { xs: "100%", md: "50%" },
       }}
     >
       <Typography
         variant="h4"
         fontWeight={800}
-        sx={{ color: "var(--primary)" }}
+        sx={{ color: "var(--primary)", fontSize: { xs: "1rem", md: "2rem" } }}
       >
         Welcome to Chick Hub{" "}
         <span style={{ color: "var(--secondary)" }}>
           Empowering Poultry Farmers
         </span>
       </Typography>
-      <Typography variant="h6" fontWeight={400} fontSize="1rem">
+      <Typography
+        variant="h6"
+        fontWeight={400}
+        sx={{ fontSize: { xs: "0.8rem", md: "1rem" } }}
+      >
         Smart tools to manage your flock, boost productivity, and connect to
         markets.
       </Typography>
-      <Box sx={{ display: "flex", gap: "2rem" }}>
+      <Box sx={{ display: "flex", gap: { xs: "1rem", md: "2rem" } }}>
         <Button
           variant="contained"
           sx={{
@@ -76,7 +81,7 @@ function TextSection() {
 }
 function ImageSection() {
   return (
-    <Box component="div" width="50%">
+    <Box component="div" sx={{ width: { xs: "100%", md: "50%" } }}>
       <Box
         component="img"
         src={FarmImage}

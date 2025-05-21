@@ -49,36 +49,25 @@ function NavBar() {
             </MenuItem>
           </Typography>
           <Box
-            component="div"
-            display="flex"
-            gap="2rem"
-            paddingLeft={{ md: "30%", xs: "10%" }}
             sx={{
+              display: { xs: "none", md: "flex" },
+              alignItems: "center",
+              gap: "2rem",
               textTransform: "uppercase",
-              fontWeight: "800",
+              fontWeight: 800,
               color: "var(--text-dark)",
             }}
           >
-            <MenuItem component={Link} to="/" sx={{ fontSize: "0.8rem" }}>
-              Home
-            </MenuItem>
-            <MenuItem
-              component={Link}
-              to="/products"
-              sx={{ fontSize: "0.8rem" }}
-            >
-              Features
-            </MenuItem>
-            <MenuItem component={Link} to="/about" sx={{ fontSize: "0.8rem" }}>
-              About
-            </MenuItem>
-            <MenuItem
-              component={Link}
-              to="/contact"
-              sx={{ fontSize: "0.8rem" }}
-            >
-              Contact
-            </MenuItem>
+            {menuItems.map((item) => (
+              <MenuItem
+                key={item.text}
+                component={Link}
+                to={item.to}
+                sx={{ fontSize: "0.8rem" }}
+              >
+                {item.text}
+              </MenuItem>
+            ))}
             <Button
               variant="contained"
               sx={{
@@ -90,8 +79,12 @@ function NavBar() {
             </Button>
           </Box>
         </Box>
-        <Box sx={{ display: { xs: "flex", md: "none" } }}>
-          <IconButton onClick={handleMenuOpen} edge="start" color="inherit">
+        <Box
+          sx={{
+            display: { xs: "flex", md: "none", width: "100%", height: "1rem" },
+          }}
+        >
+          <IconButton onClick={handleMenuOpen} edge="end" color="inherit">
             <MenuIcon sx={{ color: "var(--primary)" }} />
           </IconButton>
           <Menu anchorEl={anchorEl} open={isMenuOpen} onClose={handleMenuClose}>
