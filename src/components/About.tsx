@@ -7,6 +7,7 @@ function AboutSection() {
       component="div"
       sx={{
         display: "flex",
+        flexDirection: { xs: "column", md: "row" },
         gap: "3rem",
         alignItems: "center",
         mt: 8,
@@ -25,7 +26,11 @@ function ImageSection() {
     <Box
       component="img"
       src={Hens}
-      sx={{ width: "50%", objectFit: "cover", borderRadius: "1rem" }}
+      sx={{
+        width: { xs: "100%", md: "50%" },
+        objectFit: "cover",
+        borderRadius: "1rem",
+      }}
     ></Box>
   );
 }
@@ -35,9 +40,10 @@ function TextSection() {
     <Box
       component="div"
       sx={{
-        width: "50%",
+        width: { xs: "100%", md: "50%" },
         display: "flex",
         flexDirection: "column",
+        padding: { xs: 2, md: "none" },
         gap: "1rem",
       }}
     >

@@ -15,6 +15,7 @@ function FeaturesSection() {
         minHeight: "35rem",
         display: "flex",
         flexDirection: "column",
+        padding: { xs: 2, md: "none" },
       }}
     >
       <CardTextSection
