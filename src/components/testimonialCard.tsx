@@ -21,7 +21,7 @@ function TestimonialCard({ icon, text, name, position }: CardContainerProps) {
     <Card
       sx={{
         backgroundColor: "#ff",
-        width: "30%",
+        width: { xs: "100%", md: "30%" },
         display: "flex",
         flexDirection: "column",
         gap: "1rem",

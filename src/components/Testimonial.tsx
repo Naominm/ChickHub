@@ -21,6 +21,10 @@ function TestimonialSection() {
         justifyContent="center"
         gap="1rem"
         mt="10"
+        sx={{
+          flexDirection: { xs: "column", md: "row" },
+          padding: { xs: "1rem", md: "none" },
+        }}
       >
         <TesitimonialCard
           icon={
