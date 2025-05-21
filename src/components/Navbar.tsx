@@ -35,7 +35,7 @@ function NavBar() {
         <Box
           component="div"
           display="flex"
-          sx={{ alignItems: "center", gap: "2rem" }}
+          sx={{ alignItems: "center", gap: "20rem" }}
         >
           <Typography variant="h3">
             <MenuItem
