@@ -19,7 +19,12 @@ function FooterSection() {
       <Box
         component="div"
         className="row-2"
-        sx={{ display: "flex", gap: "15rem ", mb: "1rem" }}
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          gap: { xs: "2rem", md: "15rem" },
+          mb: "1rem",
+        }}
       >
         <Typography
           variant="body2"
