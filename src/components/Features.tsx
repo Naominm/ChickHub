@@ -10,6 +10,7 @@ function FeaturesSection() {
   return (
     <Box
       component="div"
+      id="feature"
       sx={{
         backgroundColor: "var(--bgAccent)",
         minHeight: "35rem",

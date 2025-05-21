@@ -36,25 +36,61 @@ function FooterSection() {
           component="div"
           sx={{ display: "flex", gap: "1rem", color: "var(--accent)" }}
         >
-          <Typography variant="h6" fontSize="1rem">
+          <Typography
+            variant="h6"
+            fontSize="1rem"
+            component="a"
+            href="#home"
+            sx={{ textDecoration: "none", color: "var(--bg)" }}
+          >
             Home
           </Typography>
-          <Typography variant="h6" fontSize="1rem">
+          <Typography
+            variant="h6"
+            fontSize="1rem"
+            component="a"
+            href="#about"
+            sx={{ textDecoration: "none", color: "var(--bg)" }}
+          >
             About
           </Typography>
-          <Typography variant="h6" fontSize="1rem">
+          <Typography
+            variant="h6"
+            fontSize="1rem"
+            component="a"
+            href="feature"
+            sx={{ textDecoration: "none", color: "var(--bg)" }}
+          >
             Features
           </Typography>
-          <Typography variant="h6" fontSize="1rem">
+          <Typography
+            variant="h6"
+            fontSize="1rem"
+            component="a"
+            href="contact"
+            sx={{ textDecoration: "none", color: "var(--bg)" }}
+          >
             Contact
           </Typography>
         </Box>
         <Box component="div" sx={{ display: "flex", gap: "1rem" }}>
-          <Typography variant="h6" color="#fff">
-            <LinkedInIcon />
+          <Typography
+            variant="h6"
+            color="#fff"
+            component="a"
+            href="https://www.linkedin.com/in/mbugua-naomi"
+            target="_blank"
+          >
+            <LinkedInIcon sx={{ "& hover": { color: "var(--bg)" } }} />
           </Typography>
-          <Typography variant="h6" color="#fff">
-            <GitHubIcon />
+          <Typography
+            variant="h6"
+            color="#fff"
+            component="a"
+            href="https://github.com/Naominm"
+            target="_blank"
+          >
+            <GitHubIcon sx={{ "& hover": { color: "var(--bg)" } }} />
           </Typography>
         </Box>
       </Box>

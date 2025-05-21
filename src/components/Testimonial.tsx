@@ -8,6 +8,7 @@ function TestimonialSection() {
     <Box
       component="div"
       minHeight="35rem"
+      id="testimonial"
       sx={{ backgroundColor: "var(--bg)" }}
     >
       <CardTextSection

@@ -5,6 +5,7 @@ function HeroSection() {
   return (
     <Box
       component="div"
+      id="home"
       sx={{
         display: "flex",
         flexDirection: { xs: "column", md: "row" },

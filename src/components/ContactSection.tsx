@@ -7,6 +7,7 @@ function ContactSection() {
   return (
     <Box
       component="div"
+      id="contact"
       sx={{
         minHeight: "30rem",
         paddingTop: 10,
@@ -112,6 +113,9 @@ function ContactInformation() {
       >
         <Typography
           variant="body2"
+          component="a"
+          href="https://www.linkedin.com/in/mbugua-naomi"
+          target="_blank"
           sx={{
             backgroundColor: "var(--bgIcon)",
             width: "2rem",
@@ -127,6 +131,9 @@ function ContactInformation() {
         </Typography>
         <Typography
           variant="body2"
+          component="a"
+          href="https://github.com/Naominm"
+          target="_blank"
           sx={{
             backgroundColor: "var(--bgIcon)",
             width: "2rem",

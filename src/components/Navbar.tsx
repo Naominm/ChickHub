@@ -1,4 +1,4 @@
-import { ReactNode, useState, MouseEvent } from "react";
+import { useState, MouseEvent } from "react";
 import {
   Box,
   AppBar,
@@ -8,15 +8,15 @@ import {
   IconButton,
   Menu,
 } from "@mui/material";
-import { Link } from "react-router-dom";
+// import {Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 
 function NavBar() {
   const menuItems = [
-    { text: "Home", to: "/" },
-    { text: "Features", to: "/products" },
-    { text: "About", to: "/about" },
-    { text: "Contact", to: "/contact" },
+    { text: "Home", href: "#home" },
+    { text: "Features", href: "#feature" },
+    { text: "About", href: "#about" },
+    { text: "Contact", href: "#contact" },
   ];
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const isMenuOpen = Boolean(anchorEl);
@@ -61,8 +61,8 @@ function NavBar() {
             {menuItems.map((item) => (
               <MenuItem
                 key={item.text}
-                component={Link}
-                to={item.to}
+                component="a"
+                href={item.href}
                 sx={{ fontSize: "0.8rem" }}
               >
                 {item.text}
@@ -91,8 +91,8 @@ function NavBar() {
             {menuItems.map((item) => (
               <MenuItem
                 key={item.text}
-                component={Link}
-                to={item.to}
+                component="a"
+                href={item.href}
                 onClick={handleMenuClose}
               >
                 {item.text}

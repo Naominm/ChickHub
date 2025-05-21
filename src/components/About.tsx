@@ -5,6 +5,7 @@ function AboutSection() {
   return (
     <Box
       component="div"
+      id="about"
       sx={{
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
