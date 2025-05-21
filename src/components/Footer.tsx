@@ -21,12 +21,15 @@ function FooterSection() {
         className="row-2"
         sx={{ display: "flex", gap: "15rem ", mb: "1rem" }}
       >
-        <Typography variant="h6" sx={{ fontSize: "1rem", color: "#fff" }}>
+        <Typography
+          variant="body2"
+          sx={{ fontSize: "1rem", color: "var(--bgAccent)" }}
+        >
           Empowering Poultry Farmers
         </Typography>
         <Box
           component="div"
-          sx={{ display: "flex", gap: "1rem", color: "#fff" }}
+          sx={{ display: "flex", gap: "1rem", color: "var(--accent)" }}
         >
           <Typography variant="h6" fontSize="1rem">
             Home
@@ -57,6 +60,20 @@ function FooterSection() {
           backgroundColor: "var(--accent)",
         }}
       />
+      <Typography
+        variant="body2"
+        fontSize="1rem"
+        sx={{ textAlign: "center", mt: 2, color: "var(--accent)" }}
+      >
+        &copy; 2025 ChickHub. All rights reserved.
+      </Typography>
+      <Typography
+        variant="body2"
+        fontSize="1rem"
+        sx={{ textAlign: "center", color: "var(--accent)" }}
+      >
+        Designed and Developed by Naomi
+      </Typography>
     </Box>
   );
 }
