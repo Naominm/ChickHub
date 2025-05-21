@@ -1,7 +1,31 @@
-import { Box, AppBar, Typography, MenuItem, Button } from "@mui/material";
+import { ReactNode, useState, MouseEvent } from "react";
+import {
+  Box,
+  AppBar,
+  Typography,
+  MenuItem,
+  Button,
+  IconButton,
+  Menu,
+} from "@mui/material";
 import { Link } from "react-router-dom";
+import MenuIcon from "@mui/icons-material/Menu";
 
 function NavBar() {
+  const menuItems = [
+    { text: "Home", to: "/" },
+    { text: "Features", to: "/products" },
+    { text: "About", to: "/about" },
+    { text: "Contact", to: "/contact" },
+  ];
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const isMenuOpen = Boolean(anchorEl);
+  const handleMenuOpen = (event: MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
   return (
     <Box
       component="div"
@@ -65,6 +89,35 @@ function NavBar() {
               Get Started
             </Button>
           </Box>
+        </Box>
+        <Box sx={{ display: { xs: "flex", md: "none" } }}>
+          <IconButton onClick={handleMenuOpen} edge="start" color="inherit">
+            <MenuIcon sx={{ color: "var(--primary)" }} />
+          </IconButton>
+          <Menu anchorEl={anchorEl} open={isMenuOpen} onClose={handleMenuClose}>
+            {menuItems.map((item) => (
+              <MenuItem
+                key={item.text}
+                component={Link}
+                to={item.to}
+                onClick={handleMenuClose}
+              >
+                {item.text}
+              </MenuItem>
+            ))}
+            <MenuItem onClick={handleMenuClose}>
+              <Button
+                variant="contained"
+                fullWidth
+                sx={{
+                  backgroundColor: "var(--primary)",
+                  "&:hover": { backgroundColor: "var(--hover)" },
+                }}
+              >
+                Get Started
+              </Button>
+            </MenuItem>
+          </Menu>
         </Box>
       </AppBar>
     </Box>
