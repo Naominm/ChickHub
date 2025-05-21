@@ -20,6 +20,7 @@ function ContactSection() {
         display: "flex",
         gap: "2rem",
         px: 5,
+        mb: 10,
       }}
     >
       <ContactInformation />

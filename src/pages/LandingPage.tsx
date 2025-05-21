@@ -5,6 +5,7 @@ import FeaturesSection from "../components/Features";
 import AboutSection from "../components/About";
 import TestimonialSection from "../components/Testimonial";
 import ContactSection from "../components/ContactSection";
+import FooterSection from "../components/Footer";
 function LandingPage() {
   return (
     <Box component="div">
@@ -14,6 +15,7 @@ function LandingPage() {
       <AboutSection />
       <TestimonialSection />
       <ContactSection />
+      <FooterSection />
     </Box>
   );
 }
