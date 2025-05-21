@@ -10,14 +10,31 @@ function FeaturesSection() {
   return (
     <Box
       component="div"
-      sx={{ backgroundColor: "var(--bgAccent)", minHeight: "35rem" }}
+      sx={{
+        backgroundColor: "var(--bgAccent)",
+        minHeight: "35rem",
+        display: "flex",
+        flexDirection: "column",
+      }}
     >
       <CardTextSection
         heading="What ChickHub Offers"
         subHeading="Comprehensive tools designed specifically for poultry farmers to improve"
         subHeading2="productivity and profitability."
       />
-      <Box component="div" display="flex" gap="2rem" mt="3rem">
+      <Box
+        component="div"
+        display="flex"
+        gap="2rem"
+        mt="3rem"
+        sx={{
+          flexDirection: {
+            xs: "column",
+            md: "row",
+            alignItems: { xs: "center", md: "justify" },
+          },
+        }}
+      >
         <CardSection
           title="Flock Management"
           Text="Keep track of your birds with our easy-to-use management system. Record health status, feeding schedules, and more"

@@ -25,7 +25,11 @@ function CardTextSection({
     >
       <Typography
         variant="h4"
-        sx={{ color: "var(--primary)", fontWeight: "800" }}
+        sx={{
+          color: "var(--primary)",
+          fontWeight: "800",
+          fontSize: { xs: "1rem", md: "2rem" },
+        }}
       >
         {heading}
       </Typography>
